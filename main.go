@@ -15,7 +15,8 @@ var (
 )
 
 const (
-	countTime = time.Minute * 25
+	//countTime = time.Minute * 25
+	countTime = time.Second * 10
 )
 
 func init() {
@@ -53,6 +54,7 @@ func main() {
 	}
 
 	w.SetContent(&widget.Box{Children: canvasObjects})
+	timer.Initialize(countTime)
 	w.ShowAndRun()
 }
 
